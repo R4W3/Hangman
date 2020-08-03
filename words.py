@@ -3,11 +3,7 @@ words3_5 = []
 words6_8 = []
 words8_X = []
 
-en_words = ["Potato",           #0
-            "Car",
-            "Instructions",
-            "Wall",
-            "Friend"]
+en_words = []
 
 en_words3_5 = [
     "Car",
@@ -23,15 +19,14 @@ en_words8_X = [
     "Instructions"
 ]
 
-de_words = ["Kartoffel",        #0
-            "Auto",
-            "Anleitung",
-            "Wand",
-            "Freund"]
+de_words = []
 
 de_words3_5 = [
     "Auto",
-    "Wand"
+    "Wand",
+    "Zug",
+    "Halt"
+
 ]
 
 de_words6_8 = [

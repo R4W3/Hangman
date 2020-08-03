@@ -6,7 +6,16 @@ import sys,time
 from os import system, name
 
 
-def clear():
+de_words.extend(de_words3_5)            # Adding all the by length separated words to the main lists (IMPORTANT)
+de_words.extend(de_words6_8)
+de_words.extend(de_words8_X)
+
+en_words.extend(en_words3_5)
+en_words.extend(en_words6_8)
+en_words.extend(en_words8_X)
+
+
+def clear():                            # Clear Screen function for better overview in output
     # for windows
     if name == 'nt':
         _ = system('cls')
@@ -15,13 +24,14 @@ def clear():
     else:
         _ = system('clear')
 
-def get_word():
+def get_word():                         # Random word
     word = random.choice(words)
     return word.upper()
 
 
-def play(word):
+def play(word):                         # Play with word from above
     word_completion = "_" * len(word)
+    show1 = "_ " * len(word)
     guessed = False
     guessed_letters = []
     guessed_words = []
@@ -31,7 +41,7 @@ def play(word):
     print(c[4])
     print(lengthofword, c[5])
     print(display_hangman(tries))
-    print(word_completion)
+    print(show1)
     print("\n")
     while not guessed and tries > 0:
         guess = input(c[6]).upper()
@@ -201,6 +211,9 @@ def info_screen():
         wordcount = len(words)
         print(wordcount)
         words.clear()
+    sel = input(c[20])
+    if sel != "~":
+        menu()
 
 
 def setlangen():
