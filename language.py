@@ -17,7 +17,8 @@ en = ["Welcome to Hangman\nMade by Rene Ehlers",
       " tries left.",
       "1. Go Back to the menu\n2. Exit",
       "You LOST, the word was: ",
-      "INFORMATION:\nGuessable Words:"
+      "INFORMATION:\nGuessable Words:",
+      "Choose your difficulty:\n1. Random\n2. Easy (3-5 Letters)\n3. Medium (5-8 Letters)\n4. Hard (8+ Letters)"
       ]
 de = ["Willkommen bei Galgenmännchen\nvon Rene Ehlers",
       "1. Spielen\n2. Sprache wählen\n3. Informationen\n4. Beenden",
@@ -37,5 +38,6 @@ de = ["Willkommen bei Galgenmännchen\nvon Rene Ehlers",
       " Versuche übrig.",
       "1. Zurück zum Hauptmenü\n2. Beenden",
       "Du hast VERLOREN, das Wort war: ",
-      "INFORMATIONEN:\nZu erratende Worte:"
+      "INFORMATIONEN:\nZu erratende Worte:",
+      "Wähle deinen Schwierigkeitsgrad\n1. Zufällig\n2. Leicht (3-5 Buchstaben)\n3. Mittel (5-8 Buchstaben)\n4. Schwierig (8+ Buchstaben)"
       ]

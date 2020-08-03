@@ -1,4 +1,4 @@
-from words import words, en_words, de_words
+from words import words, en_words, de_words, en_words3_5, en_words6_8, en_words8_X, de_words3_5, de_words6_8, de_words8_X
 from language import c, en, de
 import time
 import random
@@ -175,11 +175,11 @@ def language_chooser():
     language = input("Enter a number and press enter: ")
     if language == "1":
         c.extend(en)
-        words.extend(en_words)
+        setlangen()
         menu()
     if language == "2":
         c.extend(de)
-        words.extend(de_words)
+        setlangde()
         menu()
 
 def end_screen():
@@ -189,8 +189,29 @@ def end_screen():
 def info_screen():
     clear()
     print(c[18])
-    wordcount = len(words)
-    print(wordcount)
+    f = open("lang.txt", "r")
+    lan = f.read()
+    if lan == "en":
+        words.extend(en_words)
+        wordcount = len(words)
+        print(wordcount)
+        words.clear()
+    if lan == "de":
+        words.extend(de_words)
+        wordcount = len(words)
+        print(wordcount)
+        words.clear()
+
+
+def setlangen():
+    f = open("lang.txt", "w")
+    f.write("en")
+    f.close()
+
+def setlangde():
+    f = open("lang.txt", "w")
+    f.write("de")
+    f.close()
 
 def menu():
     clear()
@@ -198,13 +219,56 @@ def menu():
     print(c[1])
     selection = input(c[2])
     if selection == "1":
-        main()
+        difficulty()
     if selection == "2":
         language_chooser()
     if selection == "3":
         info_screen()
     if selection == "4":
         end_screen()
+
+def difficulty():
+    clear()
+    print(c[19])
+    f = open("lang.txt", "r")
+    lan = f.read()
+    selection = input(c[2])
+    if selection == "1":
+        if lan == "en":
+            words.clear()
+            words.extend(en_words)
+            main()
+        if lan == "de":
+            words.clear()
+            words.extend(de_words)
+            main()
+    if selection == "2":
+        if lan == "en":
+            words.clear()
+            words.extend(en_words3_5)
+            main()
+        if lan == "de":
+            words.clear()
+            words.extend(de_words3_5)
+            main()
+    if selection == "3":
+        if lan == "en":
+            words.clear()
+            words.extend(en_words6_8)
+            main()
+        if lan == "de":
+            words.clear()
+            words.extend(de_words6_8)
+            main()
+    if selection == "4":
+        if lan == "en":
+            words.clear()
+            words.extend(en_words8_X)
+            main()
+        if lan == "de":
+            words.clear()
+            words.extend(de_words8_X)
+            main()
 
 def main():
     word = get_word()
